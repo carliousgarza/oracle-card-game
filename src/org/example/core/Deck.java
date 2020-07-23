@@ -3,23 +3,23 @@ package org.example.core;
 import java.util.ArrayList;
 
 public class Deck {
-    public ArrayList<Card> deck = new ArrayList<Card>();
-    public ArrayList<Card> delt = new ArrayList<Card>();
+    public ArrayList<Card> deckOfCards = new ArrayList<Card>();
+    public ArrayList<Card> dealtCards = new ArrayList<Card>();
 
     public Deck() {
-        for(int i = 1 ; i <= 13 ; i++){
-            deck.add(new Card(i,Suite.CLUBS));
-            deck.add(new Card(i,Suite.DIAMONDS));
-            deck.add(new Card(i,Suite.HEARTS));
-            deck.add(new Card(i,Suite.SPADE));
+        for(int cardValue = 1 ; cardValue <= 13 ; cardValue++){
+            deckOfCards.add(new Card(cardValue,Suit.clubs));
+            deckOfCards.add(new Card(cardValue,Suit.diamonds));
+            deckOfCards.add(new Card(cardValue,Suit.hearts));
+            deckOfCards.add(new Card(cardValue,Suit.spades));
         }
     }
 
     public Card dealCard(){
-        int rand = (int)(Math.random() * ((deck.size() - 1)));
-        Card c = deck.get(rand);
-        deck.remove(c);
-        delt.add(c);
-        return c;
+        int randomCard = (int)(Math.random() * (deckOfCards.size() - 1) );
+        Card chosenRandomCard = deckOfCards.get(randomCard);
+        deckOfCards.remove(chosenRandomCard);
+        dealtCards.add(chosenRandomCard);
+        return chosenRandomCard;
     }
 }

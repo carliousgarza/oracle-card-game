@@ -5,14 +5,19 @@ import org.example.core.Player;
 
 public class App {
     public static void main(String[] args) {
-        Player p1 = new Player();
-        Player p2 = new Player();
+        Player playerOne = new Player();
+        Player playerTwo = new Player();
         Game game = Game.getInstance();
-        for (int i= 0; i < 5; i++) {
-            game.dealCard(p1);
-            game.dealCard(p2);
+        for (int i = 0; i < 5; i++) {
+            game.dealCard(playerOne);
+            game.dealCard(playerTwo);
         }
-        p1.showHand();
-        p2.showHand();
+        System.out.println("---------------------------------------------------------------------");
+        System.out.println("Player One's Hand");
+        playerOne.showHand();
+        System.out.println("---------------------------------------------------------------------");
+        System.out.println("Player Two's Hand");
+        playerTwo.showHand();
+        System.out.println("---------------------------------------------------------------------");
     }
 }
