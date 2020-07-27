@@ -1,8 +1,8 @@
 package org.example.core;
 
 public class Card {
-    public String suit;
-    public int value;
+    private String suit;
+    private int value;
 
     public Card(int value, String suit) {
         this.suit = suit;
@@ -19,7 +19,9 @@ public class Card {
             return "Q" + suit;
         } else if (value == 13) {
             return "K" + suit;
-        }
+        } /* else if (value == 14) {
+            return "JOKER" + suit;
+        } */
         return value + suit;
     }
 }
