@@ -1,8 +1,19 @@
 package org.example.core;
 
-public interface Suit {
-    String spades = "♠";
-    String hearts = "♥";
-    String diamonds = "♦";
-    String clubs = "♣";
+public enum Suit {
+    SPADES, HEARTS, DIAMONDS, CLUBS;
+
+    @Override
+    public String toString() {
+        switch (this) {
+            case SPADES:
+                return("♠");
+            case HEARTS:
+                return("♥");
+            case DIAMONDS:
+                return("♦");
+            default:
+                return("♣");
+        }
+    }
 }
