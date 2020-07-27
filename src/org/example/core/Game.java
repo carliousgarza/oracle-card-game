@@ -6,6 +6,7 @@ public class Game implements AutoCloseable {
 
     private Game() {
         deck = new Deck();
+        deck.Shuffle();
     }
 
     public static Game getInstance() {

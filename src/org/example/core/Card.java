@@ -11,6 +11,15 @@ public class Card {
 
     @Override
     public String toString() {
-        return value + " of " + suit;
+        if (value == 1) {
+            return "A" + suit;
+        } else if (value == 11) {
+            return "J" + suit;
+        } else if (value == 12) {
+            return "Q" + suit;
+        } else if (value == 13) {
+            return "K" + suit;
+        }
+        return value + suit;
     }
 }
