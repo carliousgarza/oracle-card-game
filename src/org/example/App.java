@@ -6,16 +6,11 @@ public class App {
     public static void main(String[] args) {
         //App shouldn't worry about anything other than starting the game.
 
-        Game game = Game.getInstance();
-
-        game.start();
-
-        try {
-            game.close();
+        try( Game game = Game.getInstance() ) { 
+            game.start();
         } catch (Exception e) {
             e.printStackTrace();
         }
 
     }
-
 }
