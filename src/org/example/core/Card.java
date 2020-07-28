@@ -1,6 +1,8 @@
 package org.example.core;
 
 public class Card {
+    // Card now uses Suit & CardValue attributes instead of Int & Suit.
+
     private Suit suit;
     private CardValue value;
 
@@ -11,6 +13,6 @@ public class Card {
 
     @Override
     public String toString() {
-        return value.toString() + suit;
+        return value.toString() + suit.toString();
     }
 }

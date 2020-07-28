@@ -21,17 +21,23 @@ public class Game implements AutoCloseable {
         showHands();
     }
 
+    public void dealCard(Player player) {
+        player.hand.add(deck.dealCard());
+    }
+
     private static void showHands() {
+        //Cleaner print, to make it easier on the eye.
+
         if (playerOne == null || playerTwo == null) {
             return;
         }
-        System.out.println("---------------------------------------------------------------------");
+        System.out.println("-----------------------");
         System.out.println("Player One's Hand");
         playerOne.showHand();
-        System.out.println("---------------------------------------------------------------------");
+        System.out.println("-----------------------");
         System.out.println("Player Two's Hand");
         playerTwo.showHand();
-        System.out.println("---------------------------------------------------------------------");
+        System.out.println("-----------------------");
     }
 
     public static Game getInstance() {
@@ -39,10 +45,6 @@ public class Game implements AutoCloseable {
             gameInstance = new Game();
         }
         return gameInstance;
-    }
-
-    public void dealCard(Player player) {
-        player.hand.add(deck.dealCard());
     }
 
     @Override
