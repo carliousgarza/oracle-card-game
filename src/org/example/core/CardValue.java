@@ -14,5 +14,4 @@ public enum CardValue {
     public String toString() {
         return (cardValueString);
     }
-
 }

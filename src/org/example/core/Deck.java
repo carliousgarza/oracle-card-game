@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class Deck {
-    // Could've gone for Card[52] for efficiency, but decided to keep arraylist for clarity and simplicity.
+    // Could've gone for Card[52] for efficiency, but decided to keep arraylist for
+    // clarity and simplicity.
     private ArrayList<Card> deckOfCards = new ArrayList<Card>();
     private ArrayList<Card> dealtCards = new ArrayList<Card>();
 
@@ -29,7 +30,8 @@ public class Deck {
          */
     }
 
-    // Decided to shuffle once instead of getting a random number each time you deal a card.
+    // Decided to shuffle once instead of getting a random number each time you deal
+    // a card.
     public void shuffle() {
         Collections.shuffle(deckOfCards);
     }
