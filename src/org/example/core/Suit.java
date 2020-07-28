@@ -1,19 +1,16 @@
 package org.example.core;
 
 public enum Suit {
-    SPADES, HEARTS, DIAMONDS, CLUBS;
+    SPADES("♠"), HEARTS("♥"), DIAMONDS("♦"), CLUBS("♣");
+
+    private final String suitString;
+
+    private Suit(String suitString) {
+        this.suitString = suitString;
+    }
 
     @Override
     public String toString() {
-        switch (this) {
-            case SPADES:
-                return("♠");
-            case HEARTS:
-                return("♥");
-            case DIAMONDS:
-                return("♦");
-            default:
-                return("♣");
-        }
+        return suitString;
     }
 }
