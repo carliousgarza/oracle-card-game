@@ -14,14 +14,14 @@ public class Game implements AutoCloseable {
     public void start() {
         playerOne = new Player();
         playerTwo = new Player();
-        for (int i = 0; i < 5; i++) {
+        for (int cardsDealt = 1; cardsDealt <= 5; cardsDealt++) {
             dealCard(playerOne);
             dealCard(playerTwo);
         }
-        printHands();
+        showHands();
     }
 
-    private static void printHands() {
+    private static void showHands() {
         if (playerOne == null || playerTwo == null) {
             return;
         }
