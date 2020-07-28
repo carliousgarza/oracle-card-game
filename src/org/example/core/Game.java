@@ -21,11 +21,11 @@ public class Game implements AutoCloseable {
         showHands();
     }
 
-    public void dealCard(Player player) {
+    private void dealCard(Player player) {
         player.hand.add(deck.dealCard());
     }
 
-    private static void showHands() {
+    private void showHands() {
         //Cleaner print, to make it easier on the eye.
 
         if (playerOne == null || playerTwo == null) {
